@@ -1,11 +1,21 @@
 import os
+from _datetime import datetime
+
+
+def write_logs(name_func, arguments, result):
+    with open('./main.log', 'a', encoding='utf-8') as f:
+        name = str(name_func).strip('()\',')
+        f.writelines(f'name func: {name}, time_run: {datetime.now()}, arguments: {arguments}, result func: {result}\n')
 
 
 def logger(old_function):
-    ...
+    name_func = old_function.__name__
 
     def new_function(*args, **kwargs):
-        ...
+        arguments = args, kwargs
+        result = old_function(*args, **kwargs)
+        write_logs(name_func, arguments, result)
+        return old_function(*args, **kwargs)
 
     return new_function
 
