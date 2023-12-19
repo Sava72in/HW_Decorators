@@ -1,0 +1,4 @@
+name func: hello_world, time_run: 2023-12-19 19:53:57.863811, arguments: ((), {}), result func: Hello World
+name func: summator, time_run: 2023-12-19 19:53:57.863871, arguments: ((2, 2), {}), result func: 4
+name func: div, time_run: 2023-12-19 19:53:57.863917, arguments: ((6, 2), {}), result func: 3.0
+name func: summator, time_run: 2023-12-19 19:53:57.863958, arguments: ((4.3,), {'b': 2.2}), result func: 6.5
